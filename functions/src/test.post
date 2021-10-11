@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "f7c19800-0874-4c58-90b2-c8cd0fa22622",
+		"name": "stripe cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stripePaymentIntent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"gIg3jk0OzmUN1yq3w6RA\",\r\n    \"totalAmount\": 411,\r\n    \"IdempotencyKEy\": \"vcvc655656565656\",\r\n    \"source\":\"{\\\"id\\\":\\\"pm_1Ia3FGFMqZLnl2HwUorrTtgq\\\"}\",\r\n    \"Cart\":[{\"uid\":\"DMKXRNvxp2UUoJxXLJVfTCIWuf12\",\"courseId\":\"5gqw3IY6Zru83kMeuzn6\",\"courseImage\":[\"https://firebasestorage.googleapis.com/v0/b/learningapp-a273d.appspot.com/o/images%2F1615482251908_control_center.png?alt=media&token=83784fdf-9c22-4e62-9174-5db46fcd1245\"],\"name\":\"React Developer\",\"currency\":\"$\",\"price\":234,\"quantity\":1,\"subtotal\":234}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/learningapp-a273d/us-central1/stripePaymentIntent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"learningapp-a273d",
+						"us-central1",
+						"stripePaymentIntent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stripePaymentMethod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"number\": \"4242424242424242\",\r\n    \"exp_month\": 3,\r\n    \"exp_year\": 2022,\r\n    \"cvc\": \"314\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/learningapp-a273d/us-central1/stripePaymentMethod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"learningapp-a273d",
+						"us-central1",
+						"stripePaymentMethod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "applyVoucher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"hgdjgsadjsatd7sa6d7a\",\r\n    \"couponCode\":\"7wAO7Jy0qZRea4rYidKb\",\r\n    \"cart\":[\r\n        {\r\n        \"uid\":\"DMKXRNvxp2UUoJxXLJVfTCIWuf12\",\r\n        \"courseId\":\"voUTiG6OHBMmHxdBuTlJ\",\r\n        \"courseImage\":\"https://storage.googleapis.com/learningapp-a273d.appspot.com/images/courseImg_1D3rN9yQEBgfz3KeMOL-Rx_Logo.png\",\r\n        \"name\":\"RxJS - What and Why?\",\r\n        \"currency\":\"$\",\r\n        \"price\":\"74.99\",\r\n        \"quantity\":1,\r\n        \"discount\":0,\r\n        \"subtotal\":\"74.99 \"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/learningapp-a273d/us-central1/applyVoucher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"learningapp-a273d",
+						"us-central1",
+						"applyVoucher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stripeOnBoardingTeacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacherid\":\"Hd84yli1nUzpmA5mWaSA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/learningapp-a273d/us-central1/stripeOnBoardingTeacher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"learningapp-a273d",
+						"us-central1",
+						"stripeOnBoardingTeacher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stripeOnBoardingTeacherStatusUpdate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacherid\":\"Hd84yli1nUzpmA5mWaSA\",\r\n    \"success\":\"true\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/learningapp-a273d/us-central1/stripeOnBoardingTeacherStatusUpdate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"learningapp-a273d",
+						"us-central1",
+						"stripeOnBoardingTeacherStatusUpdate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
